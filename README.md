@@ -69,7 +69,7 @@ You have freedom on exact fonts as long as the overall look and visual weight cl
 
 - Visual accuracy vs. `static/images/prototype.png`.
 - Clean, readable code.
-- Responsiveness.
+- Responsiveness across multiple screens.
 - Thoughtful use of the provided gradient and asset.
 
 ---
