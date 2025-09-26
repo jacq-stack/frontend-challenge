@@ -30,7 +30,7 @@
 	</div>
 
 	<!-- Connecting line  -->
-	<div class="flex-shrink-0 w-8 sm:w-12 md:w-16 h-px" style={gradientStyle}></div>
+	<div class="flex-shrink-0 w-8 sm:w-12 md:w-6 lg:w-20 h-px" style={gradientStyle}></div>
 
 	<!-- Role badge with color -->
 	<div class="flex-shrink-0">

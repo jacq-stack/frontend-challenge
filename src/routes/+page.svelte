@@ -28,7 +28,7 @@
 
 <!-- Step 2 -->
 <section
-	class="py-40 pl-5 md:pl-15 lg:pl-30 flex flex-col gap-15 md:gap-5 lg:gap-10 xl:gap-30 md:flex-row text-center md:text-start items-center justify-between"
+	class="py-40 pl-5 md:pl-15 lg:pl-30 flex flex-col gap-15 md:gap-3 lg:gap-10 xl:gap-30 md:flex-row text-center md:text-start items-center justify-between"
 >
 	<div class="pr-5 md:pr-0">
 		<Step title={steps[1].title} description={steps[1].description} time={steps[1].time} />
