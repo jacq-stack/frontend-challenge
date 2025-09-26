@@ -1,5 +1,6 @@
 <script>
 	import landingPageContent from '../content/landing.json';
+	import Step from '$lib/components/Step.svelte';
 	import phoneImg from '../lib/assets/goose-iphone.png';
 	import phoneImg2 from '../lib/assets/goose-iphone-2.png';
 	const { hero, steps, matches, phoneImgInfo } = landingPageContent;
@@ -16,13 +17,15 @@
 
 	<!-- Step 1: 3rd try with flex and cropped-sized iphone-->
 	<section
-		class="px-5 md:px-15 lg:px-30 flex flex-col md:flex-row text-center md:text-start justify-between items-center"
+		class="px-5 md:px-15 lg:px-30 flex flex-col gap-5 md:gap-0 md:flex-row text-center md:text-start justify-between items-center"
 	>
-		<div class="flex flex-col gap-3 mb-5 md:mb-0">
+		<!-- <div class="flex flex-col gap-3">
 			<h2 class="font-bold text-3xl lg:text-4xl">{steps[0].title}</h2>
 			<p class="leading-5">{steps[0].description}</p>
 			<p class="text-2xl font-normal">{steps[0].time}</p>
-		</div>
+		</div> -->
+		<Step title={steps[0].title} description={steps[0].description} time={steps[0].time} />
+
 		<div class="sm:w-3/5 md:w-2/5 lg:w-1/2 flex justify-center items-center lg:mx-30">
 			<img src={phoneImg2} alt={phoneImgInfo.alt} class="" />
 		</div>
