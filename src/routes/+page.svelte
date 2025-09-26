@@ -1,21 +1,36 @@
 <script>
 	import landingPageContent from '../content/landing.json';
 	import phoneImg from '../lib/assets/goose-iphone.png';
+	import phoneImg2 from '../lib/assets/goose-iphone-2.png';
 	const { hero, steps, matches, phoneImgInfo } = landingPageContent;
 </script>
 
-<!-- Hero Section -->
-<section
-	class="bg-goose-gradient px-5 pt-35 pb-20 text-goose-grey-text flex justify-center text-center"
->
-	<div>
-		<h1 class="font-bold text-4xl md:text-5xl mb-5">{@html hero.title}</h1>
-		<p class="text-lg md:text-2xl leading-7">{@html hero.subtitle}</p>
-	</div>
-</section>
+<div class="bg-goose-gradient text-goose-grey-text">
+	<!-- Hero Section -->
+	<section class="px-5 pt-40 mb-25 flex justify-center text-center">
+		<div>
+			<h1 class="font-bold text-4xl md:text-5xl mb-5">{@html hero.title}</h1>
+			<p class="text-lg md:text-2xl leading-7">{@html hero.subtitle}</p>
+		</div>
+	</section>
+
+	<!-- Step 1: 3rd try with flex and cropped-sized iphone-->
+	<section
+		class="px-5 md:px-15 lg:px-30 flex flex-col md:flex-row text-center md:text-start justify-between items-center"
+	>
+		<div class="flex flex-col gap-3 mb-5 md:mb-0">
+			<h2 class="font-bold text-3xl lg:text-4xl">{steps[0].title}</h2>
+			<p class="leading-5">{steps[0].description}</p>
+			<p class="text-2xl font-normal">{steps[0].time}</p>
+		</div>
+		<div class="sm:w-3/5 md:w-2/5 lg:w-1/2 flex justify-center items-center lg:mx-30">
+			<img src={phoneImg2} alt={phoneImgInfo.alt} class="" />
+		</div>
+	</section>
+</div>
 
 <!-- Steps Section -->
-<!-- Step 1 -->
+<!-- Step 1: first try -->
 <!-- <section class="flex gap-5 bg-goose-gradient text-goose-grey-text px-30">
 	<div class="">
 		<h2 class="font-bold text-3xl md:text-4xl mb-3">{steps[0].title}</h2>
@@ -27,8 +42,8 @@
 	</div>
 </section> -->
 
-<!-- Step 1 -->
-<section
+<!-- Step 1: 2nd try with Grid and full-sized iphone-->
+<!-- <section
 	class="md:grid md:grid-cols-10 md:items-center bg-goose-gradient text-goose-grey-text px-5 md:px-15 lg:px-30"
 >
 	<div class="col-span-3 flex flex-col gap-3">
@@ -39,7 +54,7 @@
 	<div class="col-start-5 col-span-5 h-100 md:h-120 lg:h-180 overflow-hidden">
 		<img src={phoneImg} alt={phoneImgInfo.alt} class="p-10 md:pd-0" />
 	</div>
-</section>
+</section> -->
 
 <!-- Step 2 -->
 <section class="flex gap-5 pl-30 py-20">
