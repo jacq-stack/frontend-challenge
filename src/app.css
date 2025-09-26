@@ -1,1 +1,20 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+@theme {
+	--font-urbanist: 'Urbanist', sans-serif;
+	--color-goose-dark: #1d1d1b;
+	--color-goose-grey-text: #ede9e5;
+}
+
+@utility bg-goose-gradient {
+	background-image: linear-gradient(95deg, #9747ff 16.16%, #447fed 117.37%);
+}
+
+body {
+	background-color: var(--color-goose-dark);
+	color: white;
+	font-style: normal;
+	font-family: var(--font-urbanist);
+	font-optical-sizing: auto;
+	font-weight: 200;
+}
