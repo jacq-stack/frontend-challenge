@@ -1,19 +1,17 @@
 <script>
 	import landingPageContent from '../content/landing.json';
 	import Step from '$lib/components/Step.svelte';
-	import phoneImg from '../lib/assets/goose-iphone.png';
-	import phoneImg2 from '../lib/assets/goose-iphone-2.png';
+	import MatchItem from '$lib/components/MatchItem.svelte';
+	import phoneImg from '../lib/assets/goose-iphone-2.png';
 	const { hero, steps, matches, phoneImgInfo } = landingPageContent;
 </script>
 
 <div class="bg-goose-gradient text-goose-grey-text">
 	<!-- Hero Section -->
-	<section class="px-5 pt-40 mb-25 flex justify-center text-center">
-		<div>
-			<h1 class="font-bold text-4xl md:text-5xl mb-5">{@html hero.title}</h1>
-			<p class="text-lg md:text-2xl leading-7">{@html hero.subtitle}</p>
-		</div>
-	</section>
+	<header class="px-5 pt-40 pb-25 flex flex-col gap-5 justify-center items-center text-center">
+		<h1 class="font-bold text-3xl md:text-4xl">{@html hero.title}</h1>
+		<p class="text-lg md:text-xl leading-6 w-[80%]">{@html hero.subtitle}</p>
+	</header>
 
 	<!-- Step 1: 3rd try with flex and cropped-sized iphone-->
 	<section
@@ -27,7 +25,7 @@
 		<Step title={steps[0].title} description={steps[0].description} time={steps[0].time} />
 
 		<div class="sm:w-3/5 md:w-2/5 lg:w-1/2 flex justify-center items-center lg:mx-30">
-			<img src={phoneImg2} alt={phoneImgInfo.alt} class="" />
+			<img src={phoneImg} alt={phoneImgInfo.alt} class="" />
 		</div>
 	</section>
 </div>
@@ -60,63 +58,37 @@
 </section> -->
 
 <!-- Step 2 -->
-<section class="flex gap-5 pl-30 py-20">
-	<div>
-		<h2>{steps[1].title}</h2>
-		<p>{steps[1].description}</p>
-		<p>{steps[1].time}</p>
+<section
+	class="py-40 pl-5 md:pl-15 lg:pl-30 flex flex-col gap-15 md:gap-5 lg:gap-10 xl:gap-30 md:flex-row text-center md:text-start items-center justify-between"
+>
+	<div class="pr-5 md:pr-0">
+		<Step title={steps[1].title} description={steps[1].description} time={steps[1].time} />
 	</div>
-	<ul>
+
+	<ul class="w-full md:w-[85%] lg:w-2/3 flex flex-col gap-1 overflow-hidden">
 		{#each matches as match}
-			<li>
-				<p>{match.name}</p>
-				<p>{match.role}</p>
-			</li>
+			<MatchItem name={match.name} role={match.role} color={match.color} />
 		{/each}
 	</ul>
-</section>
 
-<!-- <section class="bg-goose-gradient px-30 py-35">
-	<div>
-		<h1>How Goose Delivers Results. Fast.</h1>
-		<p>A smarter, simpler way to hire and get hired. Built on efficiency, fairness, and trust</p>
-	</div>
-	<div>
-		<div>
-			<h2>Create a Brief</h2>
-			<p>Tell us what you need–skills, timeline, budget.</p>
-			<p>🕐 ~5 minutes</p>
-		</div>
-		<img alt="Goose Freelance App" />
-	</div>
+	<!-- <ul class="w-full md:w-[85%] lg:w-2/3 flex flex-col gap-1 overflow-hidden">
+		{#each matches as match}
+			<li class="flex items-center">
+				<p
+					class="text-xs sm:text-sm lg:text-base font-medium px-2 py-1 sm:px-4 sm:py-2 border-1 rounded-full whitespace-nowrap text-center"
+				>
+					{match.name}
+				</p>
+				<div
+					class="min-w-[10vw] sm:min-w-[15vw] md:min-w-[3vw] ld:min-w-[5vw] h-0.25 bg-text-white"
+				></div>
+				<p
+					class="text-xs sm:text-sm lg:text-base px-1 sm:px-3 py-0.5 border-1 rounded-full whitespace-nowrap text-center text-{match.color}"
+				>
+					{match.role}
+				</p>
+				<div class="w-screen h-0.25 bg-text-white"></div>
+			</li>
+		{/each}
+	</ul> -->
 </section>
-
-<section>
-	<div>
-		<h2>Get Recommended Matches</h2>
-		<p>Our AI surfaces vetted freelancers from trusted referrals.</p>
-		<p>🕐 ~1 minute</p>
-	</div>
-	<ul>
-		<li>
-			<p>Clara Moreau</p>
-			<p>Content Editor & Copywriter</p>
-		</li>
-		<li>
-			<p>Daniel Weber</p>
-			<p>Full-Stack Developer & Data Consultant</p>
-		</li>
-		<li>
-			<p>Elena Rossi</p>
-			<p>Art Director & Brand Designer</p>
-		</li>
-		<li>
-			<p>Mateo Silva</p>
-			<p>Videographer & Motion Editor</p>
-		</li>
-		<li>
-			<p>Anna Novak</p>
-			<p>Performance Coach & Workshop Facilitator</p>
-		</li>
-	</ul>
-</section> -->

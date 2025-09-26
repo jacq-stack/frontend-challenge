@@ -18,23 +18,28 @@
 	"matches": [
 		{
 			"name": "Clara Moreau",
-			"role": "Content Editor & Copywriter"
+			"role": "Content Editor & Copywriter",
+			"color": "orange"
 		},
 		{
 			"name": "Daniel Weber",
-			"role": "Full-Stack Developer & Data Consultant"
+			"role": "Full-Stack Developer & Data Consultant",
+			"color": "purple"
 		},
 		{
 			"name": "Elena Rossi",
-			"role": "Art Director & Brand Designer"
+			"role": "Art Director & Brand Designer",
+			"color": "green"
 		},
 		{
 			"name": "Mateo Silva",
-			"role": "Videographer & Motion Editor"
+			"role": "Videographer & Motion Editor",
+			"color": "yellow"
 		},
 		{
 			"name": "Anna Novak",
-			"role": "Performance Coach & Workshop Facilitator"
+			"role": "Performance Coach & Workshop Facilitator",
+			"color": "blue"
 		}
 	],
 	"phoneImgInfo": {
